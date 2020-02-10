@@ -138,7 +138,7 @@
         "port": 8117,
         "blocks": 30,
         "payments": 30,
-        "password": "rhyka1207",
+        "password": "YOUR PASSWORD",
         "ssl": false,
         "sslPort": 8119,
         "sslCert": "./cert.pem",
