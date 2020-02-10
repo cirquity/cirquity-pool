@@ -1,11 +1,14 @@
 {
-    "name": "cryptonote-nodejs-pool",
-    "version": "1.3.5",
+    "name": "cirquity-pool",
+    "version": "1.4.0",
     "license": "GPL-2.0",
     "author": "Daniel Vandal",
+    "contributors": [
+        "Deeterd <deeterd@pm.me>"
+    ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/dvandal/cryptonote-nodejs-pool.git"
+        "url": "https://github.com/cirquity/cirquity-pool.git"
     },
     "dependencies": {
         "async": "1",
@@ -14,16 +17,16 @@
         "cli-color": "*",
         "dateformat": "*",
         "mailgun.js": "*",
+        "cirquity-multi-hashing": "git://github.com/cirquity/cirquity-multi-hashing.git",
         "cirquity-cryptonote-util": "git://github.com/cirquity/cirquity-cryptonote-util.git",
         "node-telegram-bot-api": "*",
-        "nodemailer": "2.7.2",
+        "nodemailer": "*",
         "nodemailer-sendmail-transport": "*",
-        "cirquity-multi-hashing": "git://github.com/cirquity/cirquity-multi-hashing.git",
         "redis": "*",
-        "socket.io": "^2.1.1",
+        "socket.io": "*",
         "time-ago": "*"
     },
     "engines": {
-        "node": ">=4.0"
+        "node": ">=8.11.3"
     }
 }
