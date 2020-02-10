@@ -1,6 +1,5 @@
 {
     "poolHost": "your.poolhost.tld",
-
     "coin": "cirquity",
     "symbol": "CIRQ",
     "coinUnits": 100,
@@ -9,10 +8,9 @@
     "blockchainExplorer": "https://explorer.cirquity.com/block.html?hash={id}",
     "transactionExplorer": "https://explorer.cirquity.com/transaction.html?hash={id}",
     "daemonType": "cirquity",
-    "cnAlgorithm": "cryptonight-turtle",
+    "cnAlgorithm": "cryptonight_pico",
     "cnVariant": 2,
     "cnBlobType": 2,
-    "hashingUtil": true,
     "logging": {
         "files": {
             "level": "info",
@@ -24,7 +22,7 @@
             "colors": true
         }
     },
-
+    "childPools": null,
     "poolServer": {
         "enabled": true,
         "clusterForks": "auto",
@@ -255,10 +253,16 @@
         "source": "tradeogre",
         "currency": "USD"
     },
-    
+
     "charts": {
         "pool": {
             "hashrate": {
+                "enabled": true,
+                "updateInterval": 60,
+                "stepInterval": 1800,
+                "maximumPeriod": 86400
+            },
+            "miners": {
                 "enabled": true,
                 "updateInterval": 60,
                 "stepInterval": 1800,

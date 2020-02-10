@@ -195,7 +195,7 @@ Explanation for each field:
    Supported variants for "cryptonight_light": 0 (Original), 1 (Aeon v7), 2 (IPBC)
    Supported blob types: 0 (Cryptonote), 1 (Forknote v1), 2 (Forknote v2), 3 (Cryptonote v2 / Masari)
 */
-"cnAlgorithm": "cryptonight-turtle",
+"cnAlgorithm": "cryptonight_pico",
 "cnVariant": 2,
 "cnBlobType": 2,
 
