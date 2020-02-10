@@ -6,12 +6,13 @@
     "coinUnits": 100,
     "coinDecimalPlaces": 2,
     "coinDifficultyTarget": 30,
-
+    "blockchainExplorer": "https://explorer.cirquity.com/block.html?hash={id}",
+    "transactionExplorer": "https://explorer.cirquity.com/transaction.html?hash={id}",
     "daemonType": "cirquity",
-    "cnAlgorithm": "cryptonight_turtle",
+    "cnAlgorithm": "cryptonight-turtle",
     "cnVariant": 2,
     "cnBlobType": 2,
-
+    "hashingUtil": true,
     "logging": {
         "files": {
             "level": "info",

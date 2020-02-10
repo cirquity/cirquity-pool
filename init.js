@@ -1,5 +1,5 @@
 /**
- * Cryptonite Node.JS Pool
+ * Cryptonote Node.JS Pool
  * https://github.com/dvandal/cryptonote-nodejs-pool
  *
  * Pool initialization script
@@ -65,7 +65,7 @@ if (cluster.isWorker) {
 var logSystem = 'master';
 require('./lib/exceptionWriter.js')(logSystem);
 
-// Pool informations
+// Pool information
 log('info', logSystem, 'Starting Cryptonote Node.JS pool version %s', [version]);
 
 // Developer donations
