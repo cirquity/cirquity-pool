@@ -5,7 +5,7 @@
  * Pool initialization script
  **/
 
-    // Load needed modules
+// Load needed modules
 var fs = require('fs');
 var cluster = require('cluster');
 var os = require('os');

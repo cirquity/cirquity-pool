@@ -1,33 +1,33 @@
 {
-    "name": "cirquity-pool",
-    "version": "1.4.0",
-    "license": "GPL-2.0",
-    "author": "Daniel Vandal",
-    "contributors": [
-        "Deeterd <deeterd@pm.me>"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/cirquity/cirquity-pool.git"
-    },
-    "dependencies": {
-        "async": "*",
-		"base58-native": "*",
-		"bignum": "*",
-		"cli-color": "*",
-		"cirquity-multi-hashing": "git://github.com/cirquity/cirquity-multi-hashing.git",
-		"cryptoforknote-util": "git://github.com/MoneroOcean/node-cryptoforknote-util.git",
-		"cryptonight-hashing": "git://github.com/MoneroOcean/node-cryptonight-hashing.git",
-		"dateformat": "*",
-		"mailgun.js": "*",
-		"node-telegram-bot-api": "*",
-		"nodemailer": "*",
-		"nodemailer-sendmail-transport": "*",
-		"redis": "*",
-		"socket.io": "*",
-		"time-ago": "*"
-    },
-    "engines": {
-        "node": ">=8.11.3"
-    }
+  "name": "cirquity-pool",
+  "version": "1.4.0",
+  "license": "GPL-2.0",
+  "author": "Daniel Vandal",
+  "contributors": [
+    "Deeterd <deeterd@pm.me>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cirquity/cirquity-pool.git"
+  },
+  "dependencies": {
+    "async": "^3.1.1",
+    "base58-native": "*",
+    "bignum": "*",
+    "cli-color": "*",
+    "cirquity-multi-hashing": "git://github.com/cirquity/cirquity-multi-hashing.git",
+    "cryptoforknote-util": "git://github.com/MoneroOcean/node-cryptoforknote-util.git",
+    "cryptonight-hashing": "git://github.com/MoneroOcean/node-cryptonight-hashing.git",
+    "dateformat": "*",
+    "mailgun.js": "*",
+    "node-telegram-bot-api": "*",
+    "nodemailer": "^6.4.2",
+    "nodemailer-sendmail-transport": "*",
+    "redis": "^3.0.2",
+    "socket.io": "*",
+    "time-ago": "*"
+  },
+  "engines": {
+    "node": ">=8.11.3"
+  }
 }
