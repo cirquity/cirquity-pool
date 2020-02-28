@@ -8,9 +8,10 @@
     "blockchainExplorer": "https://explorer.cirquity.com/block.html?hash={id}",
     "transactionExplorer": "https://explorer.cirquity.com/transaction.html?hash={id}",
     "daemonType": "cirquity",
-    "cnAlgorithm": "cryptonight_pico",
-    "cnVariant": 2,
+    "cnAlgorithm": "cryptonight-lite",
+    "cnVariant": 1,
     "cnBlobType": 2,
+    "hashingUtil": true,
     "logging": {
         "files": {
             "level": "info",
