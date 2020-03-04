@@ -1,4 +1,4 @@
-cirquity-pool
+Cirquity Pool
 ======================
 
 High performance Node.js (with native C addons) mining pool for CryptoNote based coins. Comes with lightweight example front-end script which uses the pool's AJAX API. Support for Cryptonight (Original, Monero v7, Stellite v7), Cryptonight Light (Original, Aeon v7, IPBC) and Cryptonight Heavy (Sumokoin) algorithms.
@@ -611,111 +611,7 @@ sudo systemctl start cirquity-pool.service
 
 #### 4) Host the front-end
 
-Simply host the contents of the `website_example` directory on file server capable of serving simple static files.
-
-
-Edit the variables in the `website_example/config.js` file to use your pool's specific configuration.
-Variable explanations:
-
-```javascript
-
-/* Must point to the API setup in your config.json file. */
-var api = "http://poolhost:8117";
-
-/* Pool server host to instruct your miners to point to (override daemon setting if set) */
-var poolHost = "poolhost.com";
-
-/* Number of coin decimals places (override daemon setting if set) */
-"coinDecimalPlaces": 4,
-
-/* Contact email address. */
-var email = "support@poolhost.com";
-
-/* Pool Telegram URL. */
-var telegram = "https://t.me/YourPool";
-
-/* Pool Discord URL */
-var discord = "https://discordapp.com/invite/YourPool";
-
-/* Market stat display params from https://www.cryptonator.com/widget */
-var marketCurrencies = ["{symbol}-BTC", "{symbol}-USD", "{symbol}-EUR", "{symbol}-CAD"];
-
-/* Used for front-end block links. */
-var blockchainExplorer = "http://chainradar.com/{symbol}/block/{id}";
-
-/* Used by front-end transaction links. */
-var transactionExplorer = "http://chainradar.com/{symbol}/transaction/{id}";
-
-/* Any custom CSS theme for pool frontend */
-var themeCss = "themes/light.css";
-
-/* Default language */
-var defaultLang = 'en';
-
-```
-
-#### 5) Customize your website
-
-The following files are included so that you can customize your pool website without having to make significant changes
-to `index.html` or other front-end files thus reducing the difficulty of merging updates with your own changes:
-* `custom.css` for creating your own pool style
-* `custom.js` for changing the functionality of your pool website
-
-
-Then simply serve the files via nginx, Apache, Google Drive, or anything that can host static content.
-
-#### SSL
-
-You can configure the API to be accessible via SSL using various methods. Find an example for nginx below:
-
-* Using SSL api in `config.json`:
-
-By using this you will need to update your `api` variable in the `website_example/config.js`. For example:  
-`var api = "https://poolhost:8119";`
-
-* Inside your SSL Listener, add the following:
-
-``` javascript
-location ~ ^/api/(.*) {
-    proxy_pass http://127.0.0.1:8117/$1$is_args$args;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-}
-```
-
-By adding this you will need to update your `api` variable in the `website_example/config.js` to include the /api. For example:  
-`var api = "http://poolhost/api";`
-
-You no longer need to include the port in the variable because of the proxy connection.
-
-* Using his own subdomain, for example `api.poolhost.com`:
-
-```bash
-server {
-    server_name api.poolhost.com
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
-    
-    ssl_certificate /your/ssl/certificate;
-    ssl_certificate_key /your/ssl/certificate_key;
-
-    location / {
-        more_set_headers 'Access-Control-Allow-Origin: *';
-        proxy_pass http://127.0.01:8117;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_cache_bypass $http_upgrade;
-    }
-}
-```
-
-By adding this you will need to update your `api` variable in the `website_example/config.js`. For example:  
-`var api = "//api.poolhost.com";`
-
-You no longer need to include the port in the variable because of the proxy connection.
-
+Please refer to this [repository](https://github.com/cirquity/cirquity-pool-frontend) 
 
 #### Upgrading
 When updating to the latest code its important to not only `git pull` the latest from this repo, but to also update
